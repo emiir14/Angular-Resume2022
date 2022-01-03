@@ -1,0 +1,53 @@
+.container-contact {
+  &__mainText {
+    text-align: center;
+  }
+  &__lists {
+    list-style: none outside;
+    animation: slide-in 0.3s ease 1 both;
+  }
+  &__customBorder {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 6em;
+    padding: 1px;
+  }
+  &__images {
+    height: 60px;
+    width: 60px;
+    max-width: 100%;
+    max-height: auto;
+  }
+  &__outer {
+    width: 1px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    background: grey;
+    top: 15%;
+    box-shadow: 0px 0px 30px 20px grey;
+  }
+  &__capsuleP {
+    padding-top: 12%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-contact {
+    &__images {
+      height: 40px;
+      width: 40px;
+      max-width: 100%;
+      max-height: auto;
+    }
+    &__lists {
+      padding-bottom: 5%;
+    }
+  }
+}

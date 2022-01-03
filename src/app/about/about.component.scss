@@ -1,0 +1,46 @@
+.customActive a {
+  color: #555 !important;
+  border-bottom: 1px solid #555;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  color: #aaa;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+// .customHover {
+//   width: 38%;
+// }
+nav.customHover ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.customHover ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.customHover ul li a:hover:after {
+  // Carefull with the div
+  width: 100%;
+}

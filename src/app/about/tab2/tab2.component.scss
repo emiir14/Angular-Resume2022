@@ -1,0 +1,28 @@
+@import "../../styles/fade-in";
+
+.container-skills {
+  &__mainText {
+    text-align: center;
+    padding-bottom: 2%;
+  }
+  &__lists {
+    display: inline;
+    list-style: none outside;
+  }
+  &__listItems {
+    float: left;
+  }
+  &__images {
+    max-width: 55px;
+    max-height: 55px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-skills {
+    &__images {
+      height: 28px;
+      width: 28px;
+    }
+  }
+}
