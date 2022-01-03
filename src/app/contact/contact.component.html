@@ -37,8 +37,13 @@
         </h2>
         <div class="form-box">
           <form name="contact" method="POST" data-netlify="true">
+            <input
+              type="hidden"
+              name="form-name"
+              value="the-name-of-the-html-form"
+            />
             <p>
-              <label>Your Name: <input type="text" name="name" /></label>
+              <input type="hidden" name="form-name" value="contact" />
             </p>
             <p>
               <label>Your Email: <input type="email" name="email" /></label>
