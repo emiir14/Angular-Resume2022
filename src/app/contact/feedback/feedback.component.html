@@ -3,7 +3,7 @@
     <p>{{ errorMsg }}</p>
     <span (click)="closeError()" class="close">✖︎</span>
   </div>
-  <p>We'd like your feedback to improve our website.</p>
+  <p>I'd like your feedback to improve our website.</p>
   <form [formGroup]="feedbackForm" name="feedbackForm" (ngSubmit)="onSubmit()">
     <div id="options">
       <p class="radioOption">
@@ -37,13 +37,13 @@
         <label for="question">Question</label><br />
       </p>
     </div>
-    <!-- <div class="inputContainer">
+    <div class="inputContainer">
       <label>Description:</label>
-      <textarea rows="6" formControlName="description"></textarea>
-    </div> -->
+      <textarea rows="5" formControlName="description"></textarea>
+    </div>
     <div class="inputContainer">
       <div id="ratingLabel">
-        <label>How would you rate our site?</label>
+        <label>How would you rate my site?</label>
         <label id="ratingValue">{{ feedbackForm.value?.rating }}</label>
       </div>
       <input formControlName="rating" type="range" name="rating" max="5" />

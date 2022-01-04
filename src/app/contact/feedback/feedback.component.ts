@@ -29,14 +29,15 @@ export class FeedbackComponent{
   ) { }
 
   onSubmit() {
-    this.netlifyForms
-      .submitFeedback(this.feedbackForm.value)
-      .pipe(untilDestroyed(this))
-      .subscribe(
-        () => this.feedbackForm.reset(),
-        err => this.errorMsg = err,
-        () => this.router.navigateByUrl('/success')
-      );
+    this.netlifyForms.submitFeedback(this.feedbackForm.value).subscribe(
+      () => {
+        this.feedbackForm.reset();
+        this.router.navigateByUrl('/success');
+      },
+      err => {
+        this.errorMsg = err;
+      }
+    );
   }
 
   closeError() {
