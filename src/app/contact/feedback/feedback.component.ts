@@ -32,7 +32,7 @@ export class FeedbackComponent{
     this.netlifyForms.submitFeedback(this.feedbackForm.value).subscribe(
       () => {
         this.feedbackForm.reset();
-        this.router.navigateByUrl('/success');
+        this.router.navigateByUrl('/contact/success');
       },
       err => {
         this.errorMsg = err;
