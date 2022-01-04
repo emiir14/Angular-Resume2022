@@ -1,10 +1,4 @@
 <div class="container">
-  <h3 style="text-align: center">{{ text }}</h3>
-</div>
-
-<hr />
-
-<div class="container">
   <div class="row">
     <div class="col-sm-6">
       <ul class="container-contact__lists">
@@ -30,93 +24,7 @@
       </div>
     </div>
     <div class="col-sm-5">
-      <div class="contact">
-        <h2>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo,
-          quisquam.
-        </h2>
-        <div class="form-box">
-          <form name="contact" method="POST" data-netlify="true">
-            <input
-              type="hidden"
-              name="form-name"
-              value="the-name-of-the-html-form"
-            />
-            <p>
-              <input type="hidden" name="form-name" value="contact" />
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-            <p>
-              <label
-                >Your Role:
-                <select name="role[]" multiple>
-                  <option value="leader">Leader</option>
-                  <option value="follower">Follower</option>
-                </select></label
-              >
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
-          <!-- <form
-            name="contact-form"
-            class="contact-form"
-            method="POST"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="contact-form" />
-            <label>Name: </label>
-            <input type="text" name="name" class="input" />
-            <label>Email: </label>
-            <input type="email" name="email" class="input" required />
-            <label>Message: </label>
-            <textarea
-              name="message"
-              class="textarea"
-              placeholder="Escribime puta"
-            ></textarea>
-            <button type="submit">Submit</button>
-          </form> -->
-        </div>
-      </div>
-      <!-- <form
-        name="contact-form"
-        class="contact-form"
-        method="POST"
-        data-netlify="true"
-      >
-        <div class="form-group">
-          <label for="formGroupExampleInput">Name</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Message</label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-info mb-2" id="button">
-            Submit
-          </button>
-        </div>
-      </form> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

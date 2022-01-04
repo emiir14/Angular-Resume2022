@@ -13,6 +13,11 @@ import { FooterComponent } from './footer/footer.component';
 import { Tab1Component } from './about/tab1/tab1.component';
 import { Tab2Component } from './about/tab2/tab2.component';
 import { Tab3Component } from './about/tab3/tab3.component';
+import { FeedbackComponent } from './contact/feedback/feedback.component';
+import { SuccessComponent } from './contact/success/success.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,12 +29,17 @@ import { Tab3Component } from './about/tab3/tab3.component';
     FooterComponent,
     Tab1Component,
     Tab2Component,
-    Tab3Component
+    Tab3Component,
+    FeedbackComponent,
+    SuccessComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
