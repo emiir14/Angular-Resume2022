@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  text = `If you like what you saw do not hesitate to contact me!`;
 
   items = [
     {
