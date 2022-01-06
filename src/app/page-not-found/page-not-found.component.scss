@@ -1,3 +1,7 @@
-p {
-  text-align: center;
+.background {
+  background: var(--background-color);
+  background-image: url(/assets/not-found.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 80vh;
 }

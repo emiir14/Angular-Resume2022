@@ -3,6 +3,14 @@
   border-bottom: 1px solid #555;
 }
 
+.background {
+  background-image: url(/assets/about.svg);
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80vh;
+}
+
 nav ul {
   list-style: none;
   text-align: center;

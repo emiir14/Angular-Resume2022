@@ -7,33 +7,47 @@
   animation: slide-in 0.3s ease 1 both;
 }
 
-.vn-blue a {
-  background-color: #2980b9;
-  border-radius: 50px;
-  display: inline-block;
+a {
   position: relative;
-  padding: 20px 20px 20px 80px;
-  color: #fff;
-  transition: all 0.4s ease;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  padding: 35px 20px 13px 60px;
+  margin-right: 40px;
+  color: #444;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/download.png")
+    2px 0 no-repeat;
+}
+a:hover {
+  border-color: #444;
+  box-shadow: 0 0 10px #444;
+}
+a:active {
+  border-color: #ccc;
+  box-shadow: none;
 }
 
-.vn-blue a:before {
-  content: "\f019";
-  font-family: fontAwesome;
+a[href$=".pdf"]:before {
   position: absolute;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  font-size: 28px;
-  border-radius: 0 20px 0 0;
-  color: #000;
-  background-color: #fff;
-  opacity: 0.3;
-  padding: 20px;
-  top: 0;
-  left: 0;
+  width: 62px;
+  height: 72px;
+  top: 2px;
+  left: 2px;
+  transition: all 0.4s;
 }
 
-.vn-blue a:hover {
-  background: #2c3e50;
+a[href$=".pdf"]:before {
+  content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/pdf.png");
+}
+
+a[href$=".pdf"]:hover:before {
+  opacity: 0;
+}
+
+a[href$=".pdf"]:after {
+  content: "Download";
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  color: #aaa;
 }

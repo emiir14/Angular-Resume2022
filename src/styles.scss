@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap");
+
 :root {
   --primary-color: #98aeda;
   --secundary-color: #7a8bae;
@@ -7,42 +9,9 @@
 }
 
 body {
-  background: var(--background-color);
-  // background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-  background-image: url(assets/Coding.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  font-family: "Nunito Sans", sans-serif;
   overflow: hidden;
-}
-
-// Keeping routes inline
-main {
-  position: relative;
-}
-
-// Animation for opacity
-
-.fade-out {
-  -webkit-animation: fade-out 1s ease-out 2s both;
-  animation: fade-out 1s ease-out 2s both;
-}
-
-@-webkit-keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
+  background: var(--background-color);
 }
 
 @media screen and (min-width: 1366px) and (max-width: 1919px) {

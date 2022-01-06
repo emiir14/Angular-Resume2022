@@ -1,30 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <ul class="container-contact__lists">
-        <li class="container-contact__listItems" *ngFor="let item of items">
-          <div class="row container-contact__customBorder">
-            <div class="col-4">
-              <a href="{{ item.url }}">
-                <img class="container-contact__images" src="{{ item.image }}" />
-              </a>
-            </div>
-            <div class="col-8">
-              <a href="{{ item.url }}">
-                <p class="container-contact__capsuleP">{{ item.text }}</p>
-              </a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="col-1">
-      <div class="container-contact__outer">
-        <div class="container-contact__inner"></div>
-      </div>
-    </div>
-    <div class="col-sm-5">
-      <router-outlet></router-outlet>
-    </div>
+<div class="background container">
+  <div class="col-md-12 col-lg-5">
+    <router-outlet></router-outlet>
   </div>
 </div>
