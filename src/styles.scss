@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #98aeda;
-  --secundary-color: #7a8bae;
+  --secondary-color: #7a8bae;
   --border-color: #465b65;
   --background-color: #eaeaea;
   --text-color: #333;
@@ -10,12 +10,7 @@
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  text-size-adjust: auto;
   overflow: hidden;
   background: var(--background-color);
-}
-
-@media screen and (min-width: 1366px) and (max-width: 1919px) {
-  body {
-    line-height: 0;
-  }
 }

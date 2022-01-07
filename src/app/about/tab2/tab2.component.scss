@@ -1,17 +1,12 @@
-@import "../../styles/fade-in";
+@import "../../styles/slide-in";
+
+.customList {
+  display: flex;
+  list-style: none outside;
+  animation: slide-in 0.3s ease 1 both;
+}
 
 .container-skills {
-  &__mainText {
-    text-align: center;
-    padding-bottom: 2%;
-  }
-  &__lists {
-    display: inline;
-    list-style: none outside;
-  }
-  &__listItems {
-    float: left;
-  }
   &__images {
     max-width: 55px;
     max-height: 55px;
