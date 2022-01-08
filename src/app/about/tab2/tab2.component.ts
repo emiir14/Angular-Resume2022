@@ -27,7 +27,7 @@ export class Tab2Component implements OnInit {
     },
     {
       name: 'Typescript',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/1200px-CSS.3.svg.png'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png'
     },
     {
       name: 'Scss',

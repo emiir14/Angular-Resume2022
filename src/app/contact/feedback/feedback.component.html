@@ -1,17 +1,3 @@
-<!-- 
-    <div class="inputContainer">
-      <div id="ratingLabel">
-        <label>How would you rate my site?</label>
-        <label id="ratingValue">{{ feedbackForm.value?.rating }}</label>
-      </div>
-      <input formControlName="rating" type="range" name="rating" max="5" />
-    </div>
-
-    <div class="inputContainer">
-      <label>Email:</label>
-      <input formControlName="email" type="email" name="email" />
-    </div> -->
-
 <div class="form-container">
   <h2>Leave your message!</h2>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">

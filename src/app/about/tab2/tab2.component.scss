@@ -10,9 +10,6 @@
   padding-left: 2.5vw;
 }
 
-li p {
-}
-
 .container-skills {
   &__images {
     width: 55px;
@@ -21,10 +18,16 @@ li p {
 }
 
 @media only screen and (max-width: 600px) {
+  .skill-set-container {
+    padding-bottom: 15vh;
+  }
+  li p {
+    display: none;
+  }
   .container-skills {
     &__images {
-      height: 22px;
-      width: 22px;
+      height: 40px;
+      width: 40px;
     }
   }
 }

@@ -3,6 +3,7 @@
 :root {
   --primary-color: #98aeda;
   --secondary-color: #7a8bae;
+  --success-color: #2ebc99;
   --border-color: #465b65;
   --background-color: #eaeaea;
   --text-color: #333;
@@ -11,6 +12,11 @@
 body {
   font-family: "Nunito Sans", sans-serif;
   text-size-adjust: auto;
-  overflow: hidden;
   background: var(--background-color);
+}
+
+@media (min-width: 480px) {
+  body {
+    overflow: hidden;
+  }
 }
