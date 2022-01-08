@@ -15,7 +15,6 @@ export class NetlifyFormsService {
     const entry = new HttpParams({ fromObject: {
       'form-name': 'feedbackForm',
       ...fbEntry,
-      'rating': fbEntry.rating.toString(),
     }});
 
     return this.submitEntry(entry);
