@@ -1,36 +1,16 @@
-<!-- <div id="container">
-  <div class="error" [class.hidden]="errorMsg.length == 0">
-    <p>{{ errorMsg }}</p>
-    <span (click)="closeError()" class="close">✖︎</span>
-  </div>
-  <h2>Leave your message!</h2>
-  <form [formGroup]="contactForm" name="contactForm" (ngSubmit)="onSubmit()">
+<!-- 
     <div class="inputContainer">
-      <div class="nameInput">
-        <input
-          formControlName="firstName"
-          type="text"
-          name="firstName"
-          placeholder="Name"
-        />
+      <div id="ratingLabel">
+        <label>How would you rate my site?</label>
+        <label id="ratingValue">{{ feedbackForm.value?.rating }}</label>
       </div>
+      <input formControlName="rating" type="range" name="rating" max="5" />
     </div>
 
     <div class="inputContainer">
       <label>Email:</label>
       <input formControlName="email" type="email" name="email" />
-    </div>
-    <div class="inputContainer">
-      <label>Description:</label>
-      <textarea rows="4" formControlName="description"></textarea>
-    </div>
-    <div class="inputContainer">
-      <button type="submit" [disabled]="contactForm.invalid">
-        Submit Feedback
-      </button>
-    </div>
-  </form>
-</div> -->
+    </div> -->
 
 <div class="form-container">
   <h2>Leave your message!</h2>
@@ -47,7 +27,7 @@
         class="alert-danger"
         *ngIf="name?.invalid && (name?.dirty || name?.touched)"
       >
-        <div class="container-error-message" *ngIf="name.errors?.required">
+        <div class="container-error-message" *ngIf="name.errors.required">
           Name is required.
         </div>
         <div class="container-error-message" *ngIf="name.errors.minlength">
