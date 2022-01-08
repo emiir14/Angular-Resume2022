@@ -13,11 +13,11 @@ import { NetlifyFormsService } from '../../netlify-forms/netlify-forms.service';
 export class FeedbackComponent{
   feedbackForm = this.fb.group({
     firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
+    // lastName: ['', Validators.required],
     email: ['', [Validators.email, Validators.required]],
     type: ['', Validators.required],
     description: ['', Validators.required],
-    rating: [0, Validators.min(1)]
+    // rating: [0, Validators.min(1)]
   });
 
   errorMsg = '';

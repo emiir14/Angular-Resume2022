@@ -41,27 +41,20 @@
       <label>Description:</label>
       <textarea rows="4" formControlName="description"></textarea>
     </div>
-    <div class="inputContainer">
+    <!-- <div class="inputContainer">
       <div id="ratingLabel">
         <label>How would you rate my site?</label>
         <label id="ratingValue">{{ feedbackForm.value?.rating }}</label>
       </div>
       <input formControlName="rating" type="range" name="rating" max="5" />
-    </div>
+    </div> -->
     <div class="inputContainer">
-      <label>Name:</label>
       <div class="nameInput">
         <input
           formControlName="firstName"
           type="text"
           name="firstName"
-          placeholder="First"
-        />
-        <input
-          formControlName="lastName"
-          type="text"
-          name="lastName"
-          placeholder="Last"
+          placeholder="Name"
         />
       </div>
     </div>

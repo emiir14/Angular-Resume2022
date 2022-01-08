@@ -3,7 +3,7 @@
     I'm a self taught english speaker and frontend developer. I've been
     familiarized with english since i was a little kid, always googling
     something about a game, or looking how to fix some problem I ran into with
-    the software I currently had. Recently I’ve decided to change careers and
+    the software I currently had. Recently I've decided to change careers and
     dive deep into programming, mostly because many of my friends are pursuing
     the same objectives and they encouraged me to learn. I have made several
     courses on Udemy, I first start with The Web Development Bootcamp by Colt
@@ -13,8 +13,14 @@
 </div>
 <div class="container">
   <div class="row">
-    <ul class="customList">
+    <ul class="customList col-sm-12 col-lg-6">
       <li *ngFor="let item of technologies; let i = index">
+        <img class="container-skills__images" src="{{ item.image }}" />
+        <p>{{ item.name }}</p>
+      </li>
+    </ul>
+    <ul class="customList col-sm-12 col-lg-6">
+      <li *ngFor="let item of technologies2; let i = index">
         <img class="container-skills__images" src="{{ item.image }}" />
         <p>{{ item.name }}</p>
       </li>
