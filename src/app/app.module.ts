@@ -16,7 +16,7 @@ import { Tab3Component } from './about/tab3/tab3.component';
 import { FeedbackComponent } from './contact/feedback/feedback.component';
 import { SuccessComponent } from './contact/success/success.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -37,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule
