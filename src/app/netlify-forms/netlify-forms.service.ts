@@ -13,7 +13,7 @@ export class NetlifyFormsService {
 
   submitFeedback(fbEntry: Feedback): Observable<string> {
     const entry = new HttpParams({ fromObject: {
-      'form-name': 'contactForm',
+      'form-name': 'feedbackForm',
       ...fbEntry,
       // 'rating': fbEntry.rating.toString(),
     }});
