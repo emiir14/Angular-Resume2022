@@ -1,3 +1,52 @@
+// import { Component } from '@angular/core';
+// import { FormBuilder, Validators } from '@angular/forms';
+// import { Router } from '@angular/router';
+// import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+// import { NetlifyFormsService } from '../../netlify-forms/netlify-forms.service';
+
+// @UntilDestroy()
+// @Component({
+//   selector: 'app-feedback',
+//   templateUrl: './feedback.component.html',
+//   styleUrls: ['./feedback.component.scss']
+// })
+// export class FeedbackComponent{
+//   feedbackForm = this.fb.group({
+//     firstName: ['', Validators.required],
+//     lastName: ['', Validators.required],
+//     email: ['', [Validators.email, Validators.required]],
+//     type: ['', Validators.required],
+//     description: ['', Validators.required],
+//     rating: [0, Validators.min(1)]
+//   });
+
+//   errorMsg = '';
+
+//   constructor(
+//     private fb: FormBuilder,
+//     private router: Router,
+//     private netlifyForms: NetlifyFormsService,
+//   ) { }
+
+//   onSubmit() {
+//     this.netlifyForms.submitFeedback(this.feedbackForm.value).subscribe(
+//       () => {
+//         this.feedbackForm.reset();
+//         this.router.navigateByUrl('/contact/success');
+//       },
+//       err => {
+//         this.errorMsg = err;
+//       }
+//     );
+//   }
+
+//   closeError() {
+//     this.errorMsg = '';
+//   }
+// }
+
+/////
+
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,11 +61,6 @@ import { FormsModule }   from '@angular/forms';
   styleUrls: ['./feedback.component.scss']
 })
 export class FeedbackComponent{
-  // feedbackForm = this.fb.group({
-  //   firstName: ['', Validators.required],
-  //   email: ['', [Validators.email, Validators.required]],
-  //   description: ['', Validators.required],
-  // });
   private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   createFormGroup() {
