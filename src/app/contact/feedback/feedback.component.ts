@@ -104,7 +104,7 @@ export class FeedbackComponent{
     return this.contactForm.get('message');
   }
 
-   onSubmit() {
+  onSubmit() {
    this.netlifyForms.submitFeedback(this.contactForm.value).subscribe(
      () => {
        this.contactForm.reset();
