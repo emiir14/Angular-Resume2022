@@ -8,9 +8,15 @@
         >About<span class="caret"></span
       ></a>
       <div class="dropdown">
-        <a href="about/tab1">Personal Data</a>
-        <a href="about/tab2">Skill Set</a>
-        <a href="about/tab3">More About</a>
+        <li routerLinkActive="customActive" class="nav-item">
+          <a class="nav-link" [routerLink]="['about/tab1']">Personal Data</a>
+        </li>
+        <li routerLinkActive="customActive" class="nav-item">
+          <a class="nav-link" [routerLink]="['about/tab2']">Skill Set</a>
+        </li>
+        <li routerLinkActive="customActive" class="nav-item">
+          <a class="nav-link" [routerLink]="['about/tab3']">More Aboutt</a>
+        </li>
       </div>
     </li>
     <li routerLinkActive="insetActive" class="nav-item">
