@@ -1,5 +1,5 @@
 <div class="form-container">
-  <h2>Leave your message!</h2>
+  <h2>Contact me!</h2>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="customRow">
       <input
@@ -59,7 +59,7 @@
         name="fancy-textarea"
         id="fancy-textarea"
       ></textarea>
-      <label for="fancy-textarea">Type below*</label>
+      <label for="fancy-textarea">Message*</label>
       <div
         class="alert-danger"
         *ngIf="message?.invalid && (message?.dirty || message?.touched)"
@@ -71,9 +71,9 @@
           Message must be at least 10 characters long.
         </div>
       </div>
-      <button type="submit" class="btn-send" [disabled]="!contactForm.valid">
-        Send
-      </button>
     </div>
+    <button type="submit" class="btn-send" [disabled]="!contactForm.valid">
+      Send
+    </button>
   </form>
 </div>
