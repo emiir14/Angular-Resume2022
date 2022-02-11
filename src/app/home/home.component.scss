@@ -1,8 +1,9 @@
 @import "../styles/typing";
+@import "../styles/drop-in";
 
 .container {
   background-image: url(/assets/Coding.svg);
-  background-position: center;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
   height: 80vh;
@@ -11,36 +12,37 @@
     color: var(--text-color2);
     font-weight: bold;
     margin: 0.25rem 0;
-    font-size: calc(1.4vw + 1.4vh);
+    font-size: calc(1.3vw + 1.4vh);
   }
   & h2 {
-    font-size: calc(1.3vw + 1.3vh);
+    font-size: calc(1.2vw + 1.3vh);
+  }
+  & .circle-shape-example .curve {
+    width: 43%;
+    height: auto;
+    min-width: 150px;
+    float: left;
+    margin-right: 2rem;
+    border-radius: 50%;
+    -webkit-shape-outside: circle();
+    shape-outside: circle();
   }
   img {
     height: 30vh;
-    border: 1px solid black;
-    border-top: none;
-    border-bottom: none;
-    border-radius: 30px / 90px;
-    background-color: rgba(246, 249, 240, 0.1);
-    box-shadow: 0 1px 1px rgba(72, 78, 85, 0.6);
     transition: all 0.2s ease-out;
-  }
-  img:hover {
-    box-shadow: 0 20px 40px rgba(72, 78, 85, 0.6);
-    transform: translateY(-15px);
+    filter: drop-shadow(2px 2px 2px var(--text-color2));
   }
   .overflow-hidden {
     overflow: hidden;
+    backdrop-filter: blur(5px);
     & h1 {
       animation: drop-in 1200ms ease 500ms backwards;
     }
     & p {
       margin: 0.5rem 0;
-      font-size: calc(1vw + 1vh);
+      font-size: calc(0.8vw + 1vh);
       font-weight: bold;
       animation: drop-in 1400ms ease 1000ms backwards;
-      backdrop-filter: blur(5px);
     }
   }
 }

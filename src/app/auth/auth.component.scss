@@ -1,5 +1,13 @@
 @import "../styles/loading-spinning.scss";
 
+.container {
+  background-image: url(/assets/login.svg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80vh;
+}
+
 .loading-spinner {
   height: 200px;
 }
