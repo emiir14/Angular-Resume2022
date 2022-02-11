@@ -1,11 +1,24 @@
 @import "../../styles/slide-in";
 
-.customList {
-  display: inline;
-  list-style: none outside;
-  animation: slide-in 0.3s ease 1 both;
+.container {
+  backdrop-filter: blur(5px);
+  & ul {
+    display: inline;
+    list-style: none outside;
+    animation: slide-in 0.3s ease 1 both;
+    margin: 0;
+    padding: 0;
+    & li:nth-child(5) {
+      padding-top: 2em;
+    }
+    & span {
+      color: var(--text-color2);
+      font-weight: bold;
+    }
+  }
 }
 
+//Show pdf on page model
 a {
   position: relative;
   border: 1px solid #ccc;

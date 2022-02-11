@@ -1,9 +1,12 @@
 <div class="container">
-  <ul class="customList">
+  <ul>
     <li *ngFor="let item of personalData; let i = index">
-      <h4>{{ item }}</h4>
+      <h4>
+        <span>{{ item.tittle }}</span
+        >{{ item.content }}
+      </h4>
     </li>
-    <li style="padding-top: 2em">
+    <li>
       <a href="/assets/resume.pdf">Resume</a>
     </li>
   </ul>

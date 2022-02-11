@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,7 +16,11 @@ import { FeedbackComponent } from './contact/feedback/feedback.component';
 import { SuccessComponent } from './contact/success/success.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { PlaygroundComponent } from './playground/playground.component';
+import { PostComponent } from './playground/post/post.component';
+import { AuthComponent } from './auth/auth.component';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     FeedbackComponent,
     SuccessComponent,
     PageNotFoundComponent,
+    PlaygroundComponent,
+    PostComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,11 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, 
+    useClass: AuthInterceptorService, 
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

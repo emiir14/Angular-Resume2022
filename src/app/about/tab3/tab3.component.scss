@@ -1,0 +1,10 @@
+@import "../../styles/drop-in";
+
+.container {
+  backdrop-filter: blur(5px);
+  & p {
+    overflow: hidden;
+    animation: drop-in 1400ms ease 800ms backwards;
+    font-size: calc(0.6vw + 0.7vh);
+  }
+}

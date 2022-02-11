@@ -1,10 +1,9 @@
-// =========================== li slide in animation ==========================
 $total-items: 6;
 
 ul li {
   display: block;
   list-style: none outside;
-  animation: slide-in 0.3s ease 1 both;
+  animation: slide-in 1s ease 1 both;
 }
 
 @for $i from 1 through $total-items {
@@ -24,16 +23,3 @@ ul li {
     opacity: 1;
   }
 }
-// .row .slide {
-//   display: block;
-//   animation: slide-in 0.3s ease 1 both;
-// }
-// .row .slide:nth-child(2) {
-//   animation-delay: 0.15s;
-// }
-// .row .slide:nth-child(3) {
-//   animation-delay: 0.3s;
-// }
-// .row .slide:nth-child(4) {
-//   animation-delay: 0.45s;
-// }

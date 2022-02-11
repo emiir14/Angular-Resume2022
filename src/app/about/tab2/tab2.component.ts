@@ -6,14 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab2.component.scss']
 })
 export class Tab2Component implements OnInit {
+
   technologies = [
     {
       name: 'Angular 13',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/240px-Angular_full_color_logo.svg.png'
     },
     {
-      name: 'Javascrip',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/946px-Javascript_badge.svg.png'
+      name: 'Javascript',
+      image: 'https://openclipart.org/download/272343/1486640684.svg'
     },
     {
       name: 'Bootstrap 4',
@@ -33,7 +34,7 @@ export class Tab2Component implements OnInit {
       name: 'Scss',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png'
     }
-  ]
+  ];
 
 
   constructor() { }

@@ -15,12 +15,20 @@
           <a class="nav-link" [routerLink]="['about/tab2']">Skill Set</a>
         </li>
         <li routerLinkActive="customActive" class="nav-item">
-          <a class="nav-link" [routerLink]="['about/tab3']">More Aboutt</a>
+          <a class="nav-link" [routerLink]="['about/tab3']">More About</a>
         </li>
       </div>
     </li>
     <li routerLinkActive="insetActive" class="nav-item">
+      <a class="nav-link" routerLink="/playground/auth">Playground</a>
+    </li>
+    <li routerLinkActive="insetActive" class="nav-item">
       <a class="nav-link" routerLink="/contact">Contact</a>
+    </li>
+    <li class="nav-item" *ngIf="isAuthenticated">
+      <a style="cursor: pointer" class="nav-link" (click)="onLogout()"
+        >Logout</a
+      >
     </li>
   </ul>
 </div>

@@ -6,7 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab1.component.scss']
 })
 export class Tab1Component implements OnInit {
-  personalData = ['Name: Emir Ale', 'Age: 30', 'Current City: Cordoba', 'Birth City: Catamarca', ''];
+  personalData = [
+    {
+      tittle: 'Name:',
+      content: ' Emir Ale'
+    },
+    {
+      tittle: 'Age:', 
+      content: ' 30'
+    },
+    {
+      tittle:'Current City:',
+      content: ' Cordoba'
+    },
+    {
+      tittle: 'Birth City:',
+      content: ' Catamarca'
+    }];
 
   constructor() { }
 

@@ -1,18 +1,24 @@
 .form-container {
   padding-top: 10vh;
   text-align: center;
-}
-
-h2 {
-  background: var(--primary-color);
-  padding: 5px 0;
-  font-size: 140%;
-  font-weight: 300;
-  text-align: center;
-  color: #fff;
-  margin: -14px -14px 14px -14px;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.5em;
+  & h2 {
+    background: var(--primary-color);
+    padding: 5px 0;
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: -14px -14px 14px -14px;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5em;
+  }
+  & .customRow {
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5em;
+  }
 }
 
 .alert-danger {
@@ -28,7 +34,6 @@ h2 {
 }
 
 .btn-send {
-  -webkit-box-sizing: border-box;
   border-radius: 10px;
   box-sizing: border-box;
   width: 50%;
@@ -46,13 +51,6 @@ h2 {
   }
 }
 
-.customRow {
-  margin-bottom: 25px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.5em;
-}
 input[type="text"],
 input[type="password"],
 textarea {

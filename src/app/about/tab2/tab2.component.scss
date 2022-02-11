@@ -1,33 +1,33 @@
 @import "../../styles/slide-in";
+@import "../../styles/drop-in";
 
-.customList {
-  display: flex;
-  list-style: none outside;
-  animation: slide-in 0.3s ease 1 both;
-}
-
-.customList li {
-  padding-left: 2.5vw;
-}
-
-.container-skills {
-  &__images {
+.container {
+  backdrop-filter: blur(5px);
+  & p {
+    overflow: hidden;
+    animation: drop-in 1400ms ease 800ms backwards;
+    font-size: calc(0.6vw + 0.7vh);
+  }
+  & ul {
+    display: flex;
+    list-style: none outside;
+    animation: slide-in 0.5s ease 1 both;
+    & li {
+      padding-left: 2.5vw;
+    }
+  }
+  & img {
     width: 55px;
     height: 55px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .skill-set-container {
-    padding-bottom: 15vh;
-  }
   li p {
     display: none;
   }
-  .container-skills {
-    &__images {
-      height: 40px;
-      width: 40px;
-    }
+  img {
+    height: 35px;
+    width: 35px;
   }
 }
