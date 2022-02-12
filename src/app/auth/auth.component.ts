@@ -11,6 +11,7 @@ import { AuthResponseData, AuthService } from "./auth.service";
     styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
+    pattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     isLoginMode = true;
     isLoading = false;
     error: string = null;
