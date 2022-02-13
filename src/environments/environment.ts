@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebaseAPIKey: process.env["firebaseAPIKey"]
+  firebaseAPIKey: process.env.firebaseAPIKey;
 };
 
   // // process.env.firebaseAPIKey
