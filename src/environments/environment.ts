@@ -5,9 +5,10 @@
 export const environment = {
   production: false,
   firebaseAPIKey: 'process.env.firebaseAPIKey'
-  // process.env.firebaseAPIKey
-  // AIzaSyBaSOxF7K9YAj2W9fHeAmyNzQ5bZr7UIiQ
 };
+
+  // // process.env.firebaseAPIKey
+  // AIzaSyBaSOxF7K9YAj2W9fHeAmyNzQ5bZr7UIiQ
 
 /*
  * For easier debugging in development mode, you can import the following file
