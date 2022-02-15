@@ -12,19 +12,6 @@ export class PostsService {
 
     constructor(private http: HttpClient, private authService: AuthService) {}
     createAndStorePost(title: string, content: string) {
-        // const postData: Post = {title: title, content: content};
-        // this.http
-        // .post<{ name: string }>(
-        //   'https://resume-app-login-default-rtdb.firebaseio.com/posts.json',
-        //   postData
-        // )
-        // .subscribe(responseData => {
-        //   console.log(responseData);
-        // },
-        // error => {
-        //     this.error.next(error.message);
-        // }
-        // );
         const postData: Post = { title: title, content: content };
         return this.http
             .post<{ name: string }>(

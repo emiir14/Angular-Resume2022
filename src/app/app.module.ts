@@ -21,6 +21,7 @@ import { PlaygroundComponent } from './playground/playground.component';
 import { PostComponent } from './playground/post/post.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, 

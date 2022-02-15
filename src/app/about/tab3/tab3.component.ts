@@ -10,6 +10,7 @@ export class Tab3Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

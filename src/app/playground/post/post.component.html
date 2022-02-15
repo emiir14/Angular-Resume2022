@@ -52,12 +52,24 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <p *ngIf="loadedPosts.length < 1 && !isFetching">No posts available!</p>
-      <ul class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
+
+      <!-- // Old working code, just in case -->
+      <!-- <ul class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
         <li class="list-group-item" *ngFor="let post of loadedPosts">
           <h2>{{ post.title }}</h2>
           <p>{{ post.content }}</p>
         </li>
-      </ul>
+      </ul> -->
+
+      <owl-carousel-o [options]="customOptions">
+        <ng-container class="list-group" *ngFor="let post of loadedPosts">
+          <ng-template class="list-group-item" carouselSlide>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+
       <div class="loading-spinner" *ngIf="isFetching && !error">
         <div class="sk-chase">
           <div class="sk-chase-dot"></div>
