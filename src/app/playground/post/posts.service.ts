@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
-import { map, take, exhaustMap } from "rxjs/operators";
+import { map } from "rxjs/operators";
 import { AuthService } from "src/app/auth/auth.service";
 
 import { Post } from "./post.model";
@@ -11,8 +11,8 @@ export class PostsService {
     error = new Subject<string>();
 
     constructor(private http: HttpClient, private authService: AuthService) {}
-    createAndStorePost(title: string, content: string) {
-        const postData: Post = { title: title, content: content };
+    createAndStorePost(title: string, content: string, imagePath: string) {
+        const postData: Post = { title: title, content: content, imagePath: imagePath };
         return this.http
             .post<{ name: string }>(
                 'https://resume-app-login-default-rtdb.firebaseio.com/posts.json',

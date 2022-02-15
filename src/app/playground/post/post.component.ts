@@ -15,13 +15,14 @@ export class PostComponent implements OnInit {
   error = null;
 
   customOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
     dots: false,
+    margin: 0,
     navSpeed: 700,
-    navText: ['', ''],
+    navText: ['<', '>'],
     responsive: {
       0: {
         items: 1
@@ -52,10 +53,10 @@ export class PostComponent implements OnInit {
     });
   }
 
-  onCreatePost(postData: { title: string; content: string }) {
+  onCreatePost(postData: { title: string; content: string, imagePath: string }) {
     // this.postsService.createAndStorePost(postData.title, postData.content) 
     this.isFetching = true;
-    this.postsService.createAndStorePost(postData.title, postData.content).subscribe(()=>{
+    this.postsService.createAndStorePost(postData.title, postData.content, postData.imagePath).subscribe(()=>{
         this.isFetching = false;
         this.onFetchPosts();
     });

@@ -1,5 +1,52 @@
 @import "../../styles/loading-spinning.scss";
 
-#horz-list ul li {
-  display: inline;
+.wrapper,
+.wrapper .img-area {
+  background: #ecf0f3;
+
+  box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+}
+.wrapper {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+img {
+  width: 10px;
+}
+.wrapper .img-area {
+  height: 150px;
+  width: 150px;
+  border-radius: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-area .inner-area {
+  height: calc(100% - 25px);
+  width: calc(100% - 25px);
+  border-radius: 50%;
+}
+.inner-area img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.wrapper .name {
+  font-size: 23px;
+  font-weight: 500;
+  color: #31344b;
+  margin: 10px 0 5px 0;
+}
+.wrapper .about {
+  color: #44476a;
+  font-weight: 400;
+  font-size: 16px;
 }
