@@ -54,11 +54,10 @@ export class PostComponent implements OnInit {
   }
 
   onCreatePost(postData: { title: string; content: string, imagePath: string }) {
-    // this.postsService.createAndStorePost(postData.title, postData.content) 
     this.isFetching = true;
     this.postsService.createAndStorePost(postData.title, postData.content, postData.imagePath).subscribe(()=>{
-        this.isFetching = false;
-        this.onFetchPosts();
+      this.isFetching = false;
+      this.onFetchPosts();
     });
   }
 
