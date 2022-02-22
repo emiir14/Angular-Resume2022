@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Post } from './post.model';  
 import { PostsService } from './posts.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-post',
@@ -10,10 +11,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
+  @ViewChild('postForm', {static: false}) postForm: NgForm;
   loadedPosts: Post[] = [];
   isFetching = false;
   error = null;
-
+  
   customOptions: OwlOptions = {
     loop: false,
     mouseDrag: true,
@@ -59,6 +61,7 @@ export class PostComponent implements OnInit {
       this.isFetching = false;
       this.onFetchPosts();
     });
+    this.postForm.resetForm();
   }
 
   onFetchPosts() {
